@@ -9,10 +9,10 @@
     window.App = window.App || {}
 
     App.city = [
-        'all', 'beijing', 'shenzhen', 'hangzhou', 'chengdu'
+        'all'
     ]
 
-    App.about = {
+    App.area = {
 
         init() {
             this.__initVue()
@@ -63,6 +63,6 @@
 
     }
 
-    App.about.init()
+    App.area.init()
 
 }(jQuery))
