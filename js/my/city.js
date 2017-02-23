@@ -9,7 +9,7 @@
     window.App = window.App || {}
 
     App.city = [
-        'all'
+        'city'
     ]
 
     App.area = {
@@ -29,11 +29,7 @@
                 el: '#app',
                 data: function () {
                     return {
-                        all: {},
-                        beijing: {},
-                        shenzhen: {},
-                        chengdu: {},
-                        hangzhou: {}
+                        city: {}
                     }
                 },
                 components: {
@@ -53,7 +49,7 @@
 
                         $.when.apply($, reqs).then(function(data1, data2, data3){
                             for(var i=0,len = App.city.length; i < len; i++){
-                                self[App.city[i]] = arguments[i][0]
+                                self[App.city[i]] = arguments[i]
                             }
                         })
                     }

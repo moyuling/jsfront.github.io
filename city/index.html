@@ -6,17 +6,17 @@
     <title>前端联盟群 - 492107297</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="全国">
+    <meta name="description" content="城市榜">
 <meta property="og:type" content="website">
 <meta property="og:title" content="前端联盟群 - 492107297">
 <meta property="og:url" content="http://yoursite.com/city/index.html">
 <meta property="og:site_name" content="前端联盟群 - 492107297">
-<meta property="og:description" content="全国">
+<meta property="og:description" content="城市榜">
 <meta property="og:image" content="http://yoursite.com/item.avatar">
-<meta property="og:updated_time" content="2017-02-23T14:56:26.921Z">
+<meta property="og:updated_time" content="2017-02-23T15:26:31.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端联盟群 - 492107297">
-<meta name="twitter:description" content="全国">
+<meta name="twitter:description" content="城市榜">
 <meta name="twitter:image" content="http://yoursite.com/item.avatar">
     
 
@@ -142,10 +142,10 @@
             <div id="app" class="article-city">
                 <div class="article-item">
                     <div class="article-city-title">
-                        <h1>全国</h1>
+                        <h1>城市榜</h1>
                     </div>
-                    <div class="article-city-inner">
-                        <all-user-list :all-user-info="all"></all-user-list>
+                    <div class="article-city-inner all-city-wrap">
+                        <all-user-list :all-user-info="city"></all-user-list>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@
     var tplUserList =
         `<ol class="user-list clearfix" >
             <li v-for="(item, index) in allUserInfo">
-                <div class="user-title"><h2><em class="no" v-text="index+1">11.</em><a :href="item.blog" target="_blank" v-text="item.name"></a></h2></div>
+                <div class="user-title"><h2><em class="no" v-text="index+1">.</em><a :href="item.blog" target="_blank" v-text="item.name"></a></h2></div>
                 <div class="userinfo-content">
                     <a class="userinfo-img" :href="item.blog" target="_blank"><img :src="item.avatar" alt=""></a>
                     <div class="desc">
