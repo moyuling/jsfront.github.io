@@ -17,8 +17,8 @@
 .user-list li {
   float: left;
   width: 245px;
-  height: 255px;
-  margin: 0 10px 20px 10px;
+  height: 225px;
+  margin: 0 10px 15px 10px;
 }
 .user-list li img {
   width: 100px;
@@ -44,6 +44,9 @@
 }
 .user-list li .user-title a {
   color: #69c;
+}
+.user-list li .user-title a:hover {
+  color: #3a73ad;
 }
 .user-list li .user-title .no {
   margin-right: 10px;
@@ -76,6 +79,9 @@
 .article-summary .article-summary-inner {
   margin-right: 0;
 }
+.article-summary a:hover {
+  color: #709400;
+}
 .article-duoshuo {
   padding: 30px;
 }
@@ -105,4 +111,20 @@
 }
 .article-footer {
   padding: 30px 0 0 30px;
+}
+.article-item {
+  clear: both;
+  overflow: hidden;
+}
+.useinfo-word {
+  margin-top: 10px;
+}
+.article-area .userinfo-content .desc {
+  margin-top: 20px;
+}
+.article-area .userinfo-content .desc-info {
+  line-height: 30px;
+}
+.article-city {
+  padding-top: 15px;
 }
