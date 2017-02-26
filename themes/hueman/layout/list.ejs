@@ -1,0 +1,25 @@
+---
+layout: false
+---
+<%- partial('common/head') %>
+<body>
+<div id="wrap">
+    <%- partial('common/header', null, {cache: !config.relative_link}) %>
+    <div class="container">
+        <div class="main-body container-inner">
+            <div class="main-body-inner">
+                <section id="main">
+                    <%- partial('common/content-title') %>
+                    <div class="main-body-content">
+                        <h2>这是我原来的ejs数据</h2>
+                        <%- page.content %>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <%- partial('common/footer', null, {cache: !config.relative_link}) %>
+    <%- partial('common/scripts') %>
+</div>
+</body>
+</html>

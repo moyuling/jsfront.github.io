@@ -1,0 +1,43 @@
+---
+layout: custom
+title: 城市榜
+type: "categories"
+categories: 城市榜
+---
+<link rel="stylesheet" type="text/css" href="/css/my/common.css"/>
+<div class="article-row">
+    <article class="article article-summary">
+        <div class="article-summary-inner">
+            <div id="app" class="article-city article-area">
+                <div class="article-item">
+                    <div class="article-city-title">
+                        <h1>城市榜</h1>
+                    </div>
+                    <div class="article-city-inner all-city-wrap">
+                        <all-user-list :all-user-info="city"></all-user-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+<script id="tpl-user-list">
+    var tplUserList =
+        `<ol class="user-list clearfix" >
+            <li v-for="(item, index) in allUserInfo">
+                <div class="user-title"><h2><em class="no" v-text="index+1">.</em><a :href="item.blog" target="_blank" v-text="item.name"></a></h2></div>
+                <div class="userinfo-content">
+                    <a class="userinfo-img" :href="item.blog" target="_blank"><img :src="item.avatar" alt=""></a>
+                    <div class="desc">
+                        <dl class="desc-info">
+                            <dd><a :href="item.github" target="_blank">Github组织</a></dd>
+                            <dd><a :href="item.website" target="_blank">城市官网</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="useinfo-word"><p class="sub" :title="item.word" v-text="item.word"></p></div>
+            </li>
+        </ol>`
+</script>
+<script src="/js/vue.min.js"></script>
+<script src="/js/my/city.js"></script>

@@ -9,10 +9,10 @@
     window.App = window.App || {}
 
     App.city = [
-        'all', 'beijing', 'shenzhen', 'hangzhou', 'chengdu'
+        'city'
     ]
 
-    App.about = {
+    App.area = {
 
         init() {
             this.__initVue()
@@ -29,11 +29,7 @@
                 el: '#app',
                 data: function () {
                     return {
-                        all: {},
-                        beijing: {},
-                        shenzhen: {},
-                        chengdu: {},
-                        hangzhou: {}
+                        city: {}
                     }
                 },
                 components: {
@@ -53,7 +49,7 @@
 
                         $.when.apply($, reqs).then(function(data1, data2, data3){
                             for(var i=0,len = App.city.length; i < len; i++){
-                                self[App.city[i]] = arguments[i][0]
+                                self[App.city[i]] = arguments[i]
                             }
                         })
                     }
@@ -63,6 +59,6 @@
 
     }
 
-    App.about.init()
+    App.area.init()
 
 }(jQuery))
