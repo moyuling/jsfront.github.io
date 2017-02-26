@@ -73,6 +73,12 @@
 .userinfo-content .desc {
   display: inline-block;
 }
+.userinfo-content img {
+  -webkit-transition: 0.3s;
+}
+.userinfo-content img:hover {
+  -webkit-transform: scale(1.2);
+}
 .article-summary {
   overflow: hidden;
 }
@@ -126,5 +132,5 @@
   line-height: 30px;
 }
 .article-city {
-  padding-top: 15px;
+  padding-top: 10px;
 }
